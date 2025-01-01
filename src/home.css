@@ -1,0 +1,54 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=League+Spartan:wght@100..900&display=swap');
+
+body {
+    font-family: "Lato" !important;
+}
+
+.hero-img {
+    max-width: 400px;
+    width: 60%;
+}
+.gradient-bg {
+    background: rgb(102,74,255);
+    background: -moz-linear-gradient(90deg, rgba(102,74,255,1) 0%, rgba(79,195,247,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(102,74,255,1) 0%, rgba(79,195,247,1) 100%);
+    background: linear-gradient(90deg, rgba(102,74,255,1) 0%, rgba(79,195,247,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#664aff",endColorstr="#4fc3f7",GradientType=1);
+    width: 100%;
+    padding: 120px 50px 55px 50px; 
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+.half {
+    width: 50%;
+}
+h1 {
+    font-family: "Lato" !important;
+}
+h2, h3, h4, h5, p {
+    font-family: "Lato" !important;
+}
+.logo {
+    height: 40px;
+    width: 40px;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .gradient-bg {
+        flex-direction: column;
+        gap: 0px;
+        padding: 50px 20px;
+        margin: 0;
+    }
+    .half {
+        width: 100%;
+    }
+    .hero-img {
+        width: 100%;
+    }
+}
