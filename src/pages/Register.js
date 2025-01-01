@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import { auth } from '../firebase';
-import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
+
+import { createUserWithEmailAndPassword, updateProfile, signInWithPopup } from 'firebase/auth';
 import { useNavigate, Link } from 'react-router-dom';
+import { auth, provider } from '../firebase'; // Import the Google Auth provider
+
 
 function Register() {
   const [name, setName] = useState('');
@@ -21,6 +23,15 @@ function Register() {
       setError(error.message);
     }
   };
+
+  const handleGoogleSignIn = async () => {
+      try {
+        await signInWithPopup(auth, provider); // Sign in with Google
+        navigate('/dashboard');
+      } catch (error) {
+        setError(error.message);
+      }
+    };
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
@@ -81,6 +92,14 @@ function Register() {
             Login here
           </a>
         </p>
+        <div className="mt-6">
+          <button
+            onClick={handleGoogleSignIn}
+            className="w-full flex items-center justify-center gap-2 bg-red-500 text-white py-2 rounded hover:bg-red-600 transition"
+          >
+            <i className="fab fa-google"></i> Sign in with Google
+          </button>
+        </div>
       </div>
     </div>
   );
