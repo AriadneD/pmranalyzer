@@ -10,11 +10,10 @@ const Home = () => {
       <nav style={{position: "fixed", zIndex: "999", width: "100%"}} className="bg-carbon text-white p-4 flex justify-between items-center">
         <div style={{display: "flex", flexDirection: "row", alignItems: "center", gap: "10px"}}>
         <img src="https://i.ibb.co/XznxwNq/imageedit-8-7541710378.png" class="logo"/>
-        <h2 className="text-2xl font-bold">PMR Analyzer</h2>
+        <h2 class="titletext">PMR Analyzer</h2>
         </div>
         
         <div className="flex space-x-6">
-          <Link to="/" className="mt-2 hover:text-watermelon">Home</Link>
           <Link to="/login" className="mt-2 hover:text-watermelon">Login</Link>
           <Link to="/register" className="inline-block px-6 py-2 bg-white text-watermelon font-bold rounded hover:bg-sky hover:text-white transition">Register</Link>
         </div>

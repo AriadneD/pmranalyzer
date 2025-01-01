@@ -4,7 +4,9 @@
 body {
     font-family: "Lato" !important;
 }
-
+.desknav {
+    display: hidden;
+}
 .hero-img {
     max-width: 400px;
     width: 60%;
@@ -37,7 +39,10 @@ h2, h3, h4, h5, p {
     width: 40px;
     border-radius: 10px;
 }
-
+.titletext {
+    font-weight: bold;
+    font-size: 24px;
+}
 @media (max-width: 768px) {
     .gradient-bg {
         flex-direction: column;
@@ -50,5 +55,13 @@ h2, h3, h4, h5, p {
     }
     .hero-img {
         width: 100%;
+    }
+    .desknav {
+        color: red;
+        display: block;
+    }
+    .titletext {
+        font-weight: bold;
+        font-size: 18px;
     }
 }
